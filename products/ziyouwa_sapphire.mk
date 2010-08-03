@@ -1,6 +1,7 @@
 # Inherit AOSP device configuration for dream_sapphire.
 $(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
 
+
 # Inherit some common ziyouwamod stuff.
 $(call inherit-product, vendor/ziyouwa/products/common.mk)
 
@@ -23,7 +24,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-l
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=ziyouwa_msm_defconfig
+PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=$(TARGET_KERNEL_DIR)/config-6.35v0.51
 
 # Extra DS overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
