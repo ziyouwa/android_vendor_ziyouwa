@@ -8,6 +8,7 @@ $(call inherit-product, vendor/ziyouwa/products/common.mk)
 # Include GSM-only stuff
 $(call inherit-product, vendor/ziyouwa/products/gsm.mk)
 
+
 #
 # Setup device specific product configuration.
 #
@@ -20,6 +21,30 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=FRF91 BUILD_FING
 PRIVATE_BUILD_DESC="passion-user 2.2 FRF91 43546 release-keys"
 
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-linux-arm-ds.map
+
+# Enable JIT by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.execution-mode=int:jit
+WITH_JIT := true
+ENABLE_JSC_JIT := true
+
+#Add support for audio+video recording on camera
+BUILD_WITH_FULL_STAGEFRIGHT := true
+PRODUCT_PROPERTY_OVERRIDES += \
+	media.stagefright.enable-record=true
+
+#some property for me
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.android.dateformat=yyyy-MM-dd \
+	ro.product.locale.language=zh	\
+	ro.product.locale.region=CN	\
+	ro.build.display.id=CyanogenMod by Ziyouwa
+
+PRODUCT_LOCALES := zh_CN en_US zh_TW
+
+#Add Google software
+PRODUCT_SPECIFIC_DEFINES += CYANOGEN_WITH_GOOGLE=true
+
 
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
