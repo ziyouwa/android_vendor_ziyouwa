@@ -35,7 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #some property for me
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.android.dateformat=yyyy-MM-dd \
 	ro.product.locale.language=zh	\
 	ro.product.locale.region=CN	\
 	ro.build.display.id=CyanogenMod by Ziyouwa
