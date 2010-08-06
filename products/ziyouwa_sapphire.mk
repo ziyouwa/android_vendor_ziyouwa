@@ -9,7 +9,8 @@ DEVICE_PACKAGE_OVERLAYS := device/htc/dream_sapphire/overlay
 
 PRODUCT_PACKAGES += \
     VoiceDialer \
-    sensors.msm7k
+    sensors.msm7k \
+    PinyinIME
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -95,9 +96,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.product.locale.language=zh	\
 	ro.product.locale.region=CN	\
-	ro.build.display.id=CyanogenMod by Ziyouwa
+	ro.build.display.id=CyanogenMod_by_Ziyouwa
 
-PRODUCT_LOCALES := zh_CN en_US zh_TW
 
 #Add Google software
 PRODUCT_SPECIFIC_DEFINES += CYANOGEN_WITH_GOOGLE=true
