@@ -15,16 +15,16 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=true
 PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_MODVER=true
 
 # Add ROMManager build property
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=DonMessWivIt.ogg
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.config.ringtone=DonMessWivIt.ogg
 
-ifdef CYANOGEN_NIGHTLY
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmodnightly
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmod
-endif
+#ifdef CYANOGEN_NIGHTLY
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.rommanager.developerid=cyanogenmodnightly
+#else
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.rommanager.developerid=cyanogenmod
+#endif
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
@@ -41,7 +41,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dateformat=yyyy-MM-dd \
     ro.com.android.dataroaming=false
 
 # CyanogenMod specific product packages
