@@ -41,7 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false	\
+    ro.setupwizard.mode=OPTIONAL
 
 # CyanogenMod specific product packages
 PRODUCT_PACKAGES += \
@@ -80,15 +81,15 @@ PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/xbin/powertop:system/xbin/powertop \
     vendor/ziyouwa/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
-#PRODUCT_COPY_FILES += \
-#    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
-#    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+PRODUCT_COPY_FILES += \
+    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
+    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
  
 #PRODUCT_COPY_FILES +=  \
 #    vendor/ziyouwa/proprietary/RomManager.apk:system/app/RomManager.apk \
 
 # Always run in insecure mode, enables root on user build variants
-#ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
 ifdef CYANOGEN_WITH_GOOGLE
     PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false

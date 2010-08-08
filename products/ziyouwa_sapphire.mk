@@ -1,6 +1,5 @@
 # Inherit AOSP device configuration for dream_sapphire.
 #$(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
-PRODUCT_LOCALES := zh_CN en_US zh_TW
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
@@ -81,11 +80,6 @@ PRIVATE_BUILD_DESC="passion-user 2.2 FRF91 43546 release-keys"
 
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-linux-arm-ds.map
 
-# Enable JIT by default
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.execution-mode=int:jit
-WITH_JIT := true
-ENABLE_JSC_JIT := true
 
 #Add support for audio+video recording on camera
 BUILD_WITH_FULL_STAGEFRIGHT := true
@@ -102,18 +96,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Add Google software
 PRODUCT_SPECIFIC_DEFINES += CYANOGEN_WITH_GOOGLE=true
 
+PRODUCT_COPY_FILES +=  \
+	vendor/ziyouwa/proprietary/features.xml:system/etc/permissions/features.xml	\
+	vendor/ziyouwa/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml	\
+	vendor/ziyouwa/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
 
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=$(TOP)/kernel-msm/config-6.35v0.51
+PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=$(TOP)/config-6.35
 
 # Extra DS overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
-
-# This file is used to install the correct audio profile when booted
-PRODUCT_COPY_FILES += \
-    vendor/ziyouwa/prebuilt/dream_sapphire/etc/init.d/02audio_profile:system/etc/init.d/02audio_profile
 
 #
 # Set ro.modversion
@@ -140,3 +134,33 @@ PRODUCT_COPY_FILES +=  \
     vendor/ziyouwa/prebuilt/dream_sapphire/etc/init.d/02audio_profile:system/etc/init.d/02audio_profile \
     vendor/ziyouwa/prebuilt/dream_sapphire/etc/AudioPara_dream.csv:system/etc/AudioPara_dream.csv \
     vendor/ziyouwa/prebuilt/dream_sapphire/etc/AudioPara_sapphire.csv:system/etc/AudioPara_sapphire.csv
+    
+PRODUCT_LOCALES := zh_CN en_US zh_TW
+
+# dev:    size   erasesize  name
+# mtd0: 00040000 00020000 "misc"
+# mtd1: 00500000 00020000 "recovery"
+# mtd2: 00280000 00020000 "boot"
+# mtd3: 05a00000 00020000 "system"
+# mtd4: 05000000 00020000 "cache"
+# mtd5: 127c0000 00020000 "userdata"
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00280000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0aa00000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0a5c0000
+BOARD_VENDOR_QCOM_AMSS_VERSION := 6355
+BOARD_KERNEL_BASE := 19200000
+
+PRODUCT_PACKAGES += \
+	PinyinIME
+
+
+# Enable JIT by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.execution-mode=int:jit
+WITH_JIT := true
+ENABLE_JSC_JIT := true
+
+# Use libcamera2
+USE_CAMERA_STUB := false
+BOARD_USES_OLD_CAMERA_HACK := true
