@@ -15,16 +15,16 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=true
 PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_MODVER=true
 
 # Add ROMManager build property
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.config.ringtone=DonMessWivIt.ogg
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=DonMessWivIt.ogg
 
-#ifdef CYANOGEN_NIGHTLY
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.rommanager.developerid=cyanogenmodnightly
-#else
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.rommanager.developerid=cyanogenmod
-#endif
+ifdef CYANOGEN_NIGHTLY
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rommanager.developerid=cyanogenmodnightly
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rommanager.developerid=cyanogenmod
+endif
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
@@ -50,17 +50,18 @@ PRODUCT_PACKAGES += \
     Superuser
 
 # Copy over the changelog to the device
-#PRODUCT_COPY_FILES += \
-#    vendor/ziyouwa/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+PRODUCT_COPY_FILES += \
+    vendor/cyanogen/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Common CM overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/common
 
 # Bring in some audio files
 include frameworks/base/data/sounds/AudioPackage4.mk
 
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/ziyouwa/prebuilt/common/etc/mobile-conf.xml:system/etc/mobile-conf.xml \
     vendor/ziyouwa/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/ziyouwa/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/ziyouwa/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
@@ -81,18 +82,18 @@ PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/xbin/powertop:system/xbin/powertop \
     vendor/ziyouwa/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
-PRODUCT_COPY_FILES += \
-    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
-    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+#PRODUCT_COPY_FILES += \
+#    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
+#    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
  
 #PRODUCT_COPY_FILES +=  \
 #    vendor/ziyouwa/proprietary/RomManager.apk:system/app/RomManager.apk \
 
 # Always run in insecure mode, enables root on user build variants
-ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+#ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
-ifdef CYANOGEN_WITH_GOOGLE
-    PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false
+#ifdef CYANOGEN_WITH_GOOGLE
+#    PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false
 
 #        vendor/ziyouwa/proprietary/CarHomeGoogle.apk:./system/app/CarHomeGoogle.apk \
 #        vendor/ziyouwa/proprietary/CarHomeLauncher.apk:./system/app/CarHomeLauncher.apk \
@@ -105,7 +106,7 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/Twitter.apk:./system/app/Twitter.apk \
 #        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
 
-    PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
         vendor/ziyouwa/proprietary/GenieWidget.apk:./system/app/GenieWidget.apk \
         vendor/ziyouwa/proprietary/Gmail.apk:./system/app/Gmail.apk \
         vendor/ziyouwa/proprietary/GoogleBackupTransport.apk:./system/app/GoogleBackupTransport.apk \
@@ -136,9 +137,9 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
         vendor/ziyouwa/proprietary/libinterstitial.so:./system/lib/libinterstitial.so \
         vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so
-else
-    PRODUCT_PACKAGES += \
-        Provision \
-        GoogleSearch 
+#else
+#    PRODUCT_PACKAGES += \
+#        Provision \
+#        GoogleSearch 
 #        LatinIME
-endif
+#endif

@@ -25,7 +25,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.com.android.dateformat=yyyy-MM-dd \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
-    ro.media.dec.jpeg.memcap=10000000
+    ro.media.dec.jpeg.memcap=10000000	\
+    persist.sys.timezone=Asia/Shanghai
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
@@ -96,10 +97,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Add Google software
 PRODUCT_SPECIFIC_DEFINES += CYANOGEN_WITH_GOOGLE=true
 
-PRODUCT_COPY_FILES +=  \
-	vendor/ziyouwa/proprietary/features.xml:system/etc/permissions/features.xml	\
-	vendor/ziyouwa/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml	\
-	vendor/ziyouwa/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
+#PRODUCT_COPY_FILES +=  \
+#	vendor/ziyouwa/proprietary/features.xml:system/etc/permissions/features.xml	\
+#	vendor/ziyouwa/proprietary/com.google.android.maps.xml:system/etc/permissions/#com.google.android.maps.xml	\
+#	vendor/ziyouwa/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar
 
 # Build kernel
 PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
@@ -156,10 +157,10 @@ PRODUCT_PACKAGES += \
 
 
 # Enable JIT by default
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.execution-mode=int:jit
-WITH_JIT := true
-ENABLE_JSC_JIT := true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    dalvik.vm.execution-mode=int:jit
+#WITH_JIT := true
+#ENABLE_JSC_JIT := true
 
 # Use libcamera2
 USE_CAMERA_STUB := false
