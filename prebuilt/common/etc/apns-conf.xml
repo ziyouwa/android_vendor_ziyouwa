@@ -308,10 +308,10 @@
         
 	<apn carrier="中国移动WAP设置" mcc="460" mnc="00" apn="cmwap" proxy="10.0.0.172" port="80" type="wap"/>
 	<apn carrier="中国移动彩信设置" mcc="460" mnc="00" apn="cmwap" proxy="10.0.0.172" port="80" mmsproxy="10.0.0.172" mmsport="80" mmsc="http://mmsc.monternet.com" type="mms"/>
-	<apn carrier="中国移动因特网设置" mcc="460" mnc="02" apn="cmnet" type="default"/>
+	<apn carrier="中国移动因特网设置" mcc="460" mnc="02" apn="cmnet" type="default,supl"/>
 	<apn carrier="中国移动WAP设置" mcc="460" mnc="02" apn="cmwap" proxy="10.0.0.172" port="80" type="wap"/>
 	<apn carrier="中国移动彩信设置" mcc="460" mnc="02" apn="cmwap" proxy="10.0.0.172" port="80" mmsproxy="10.0.0.172" mmsport="80" mmsc="http://mmsc.monternet.com" type="mms"/>
-	<apn carrier="中国移动因特网设置" mcc="460" mnc="07" apn="cmnet" type="default"/>
+	<apn carrier="中国移动因特网设置" mcc="460" mnc="07" apn="cmnet" type="default,supl"/>
 	<apn carrier="中国移动WAP设置" mcc="460" mnc="07" apn="cmwap" proxy="10.0.0.172" port="80" type="wap"/>
 	<apn carrier="中国移动彩信设置" mcc="460" mnc="07" apn="cmwap" proxy="10.0.0.172" port="80" mmsproxy="10.0.0.172" mmsport="80" mmsc="http://mmsc.monternet.com" type="mms"/>
 	<apn carrier="中国联通因特网设置" mcc="460" mnc="01" apn="uninet" type="default"/>

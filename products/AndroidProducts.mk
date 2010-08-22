@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/ziyouwa_sapphire.mk
+	$(LOCAL_DIR)/ziyouwa_sapphire_cn.mk

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->
+    <string name="app_name">CyanogenMod助手</string>
+    <string name="cmparts_ui">用户设置备份/恢复</string>
+    <string name="helper_cmui_fail">保存 /sdcard/cmparts_ui.xml 失败！</string>
+    <string name="helper_cmui_success">保存 /sdcard/cmparts_ui.xml 成功！</string>
+    <string name="xml_sdcard_unmounted">载入存储卡失败!</string>
+    <string name="helper_complete">返回CMParts</string>
+</resources>
