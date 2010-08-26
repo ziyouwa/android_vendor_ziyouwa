@@ -272,18 +272,18 @@
     <string name="general_title">General</string>
 
     <!-- UI Settings : Power off prompt -->
-    <string name="pref_power_prompt_title">Power prompt</string>
-    <string name="pref_power_prompt_summary">Change whether there is a prompt after choosing shutdown or reboot</string>
+    <string name="pref_power_prompt_title">关机提示</string>
+    <string name="pref_power_prompt_summary">选择了关机或者重启之后是否显示关机提示</string>
 
     <!-- UI Settings : Render effect -->
-    <string name="pref_render_effect_title">Render effect</string>
-    <string name="pref_render_effect_summary">Change what colors are used to draw the screen (potential battery savings)</string>
+    <string name="pref_render_effect_title">渲染效果</string>
+    <string name="pref_render_effect_summary">选择用来绘制屏幕的颜色 (可能会省电)</string>
 
-    <string name="widget_name">RenderFX Widget</string>
+    <string name="widget_name">RenderFX窗口</string>
     <string name="renderfx_temp">RenderFX</string>
-    <string name="prefs_render_effect">Render Effect</string>
-    <string name="notify_render_effect">Render effect on</string>
-        <string name="add_widget">Add widget</string>
+    <string name="prefs_render_effect">渲染效果</string>
+    <string name="notify_render_effect">打开渲染</string>
+        <string name="add_widget">添加窗体</string>
 
     <!--  Widget Types -->
     <string name="night">Night</string>
@@ -295,12 +295,12 @@
 
     <!-- Notification Bar Colors -->
 
-    <string name="title_notification_bar">Notification bar</string>
-    <string name="title_custom_not_bar">Custom notification bar</string>
-    <string name="summary_custom_not_bar_on">Using customized notification bar color and style</string>
-    <string name="summary_custom_not_bar_off">Using classic CyanogenMod notification bar</string>
-    <string name="title_not_bar_color_mask">Bar color</string>
-    <string name="summary_not_bar_color_mask">Note: Transparency (alpha) setting will not be applied</string>
+    <string name="title_notification_bar">状态栏</string>
+    <string name="title_custom_not_bar">定制状态栏</string>
+    <string name="summary_custom_not_bar_on">定制状态栏显示的字体和颜色</string>
+    <string name="summary_custom_not_bar_off">使用经典的CyanogenMod状态栏</string>
+    <string name="title_not_bar_color_mask">底色</string>
+    <string name="summary_not_bar_color_mask">注意: 透明（Alpha通道）不被支持</string>
     <string name="title_custom_exp_not_bar">Custom pulldown bar</string>
     <string name="summary_custom_exp_not_bar_on">Using customized expanded pulldown bar color and style</string>
     <string name="summary_custom_exp_not_bar_off">Using classic CyanogenMod expanded pulldown bar</string>

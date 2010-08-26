@@ -57,6 +57,7 @@ include frameworks/base/data/sounds/AudioPackage4.mk
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/ziyouwa/prebuilt/common/etc/mobile-conf.xml:system/etc/mobile-conf.xml \
+    vendor/ziyouwa/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
     vendor/ziyouwa/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/ziyouwa/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/ziyouwa/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
@@ -90,12 +91,19 @@ PRODUCT_COPY_FILES += \
 
 ifdef CYANOGEN_WITH_GOOGLE
     PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false
+#        vendor/ziyouwa/proprietary/CarHomeGoogle.apk:./system/app/CarHomeGoogle.apk \
+#        vendor/ziyouwa/proprietary/CarHomeLauncher.apk:./system/app/CarHomeLauncher.apk \
+#        vendor/ziyouwa/proprietary/Facebook.apk:./system/app/Facebook.apk \
+#        vendor/ziyouwa/proprietary/LatinImeGoogle.apk:./system/app/LatinImeGoogle.apk \
+#        vendor/ziyouwa/proprietary/LatinImeTutorial.apk:./system/app/LatinImeTutorial.apk \
+#        vendor/ziyouwa/proprietary/Twitter.apk:./system/app/Twitter.apk \
+#        vendor/ziyouwa/proprietary/YouTube.apk:./system/app/YouTube.apk \
+#        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
+#        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
 
+ 
     PRODUCT_COPY_FILES += \
-        vendor/ziyouwa/proprietary/CarHomeGoogle.apk:./system/app/CarHomeGoogle.apk \
-        vendor/ziyouwa/proprietary/CarHomeLauncher.apk:./system/app/CarHomeLauncher.apk \
-        vendor/ziyouwa/proprietary/Facebook.apk:./system/app/Facebook.apk \
-        vendor/ziyouwa/proprietary/GenieWidget.apk:./system/app/GenieWidget.apk \
+       vendor/ziyouwa/proprietary/GenieWidget.apk:./system/app/GenieWidget.apk \
         vendor/ziyouwa/proprietary/Gmail.apk:./system/app/Gmail.apk \
         vendor/ziyouwa/proprietary/GoogleBackupTransport.apk:./system/app/GoogleBackupTransport.apk \
         vendor/ziyouwa/proprietary/GoogleCalendarSyncAdapter.apk:./system/app/GoogleCalendarSyncAdapter.apk \
@@ -107,8 +115,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/HtcCopyright.apk:./system/app/HtcCopyright.apk \
         vendor/ziyouwa/proprietary/HtcEmailPolicy.apk:./system/app/HtcEmailPolicy.apk \
         vendor/ziyouwa/proprietary/HtcSettings.apk:./system/app/HtcSettings.apk \
-        vendor/ziyouwa/proprietary/LatinImeGoogle.apk:./system/app/LatinImeGoogle.apk \
-        vendor/ziyouwa/proprietary/LatinImeTutorial.apk:./system/app/LatinImeTutorial.apk \
         vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
         vendor/ziyouwa/proprietary/MarketUpdater.apk:./system/app/MarketUpdater.apk \
         vendor/ziyouwa/proprietary/MediaUploader.apk:./system/app/MediaUploader.apk \
@@ -116,13 +122,9 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/OneTimeInitializer.apk:./system/app/OneTimeInitializer.apk \
         vendor/ziyouwa/proprietary/PassionQuickOffice.apk:./system/app/PassionQuickOffice.apk \
         vendor/ziyouwa/proprietary/SetupWizard.apk:./system/app/SetupWizard.apk \
-        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
         vendor/ziyouwa/proprietary/Talk.apk:./system/app/Talk.apk \
-        vendor/ziyouwa/proprietary/Twitter.apk:./system/app/Twitter.apk \
         vendor/ziyouwa/proprietary/Vending.apk:./system/app/Vending.apk \
         vendor/ziyouwa/proprietary/VoiceSearch.apk:./system/app/VoiceSearch.apk \
-        vendor/ziyouwa/proprietary/YouTube.apk:./system/app/YouTube.apk \
-        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk \
         vendor/ziyouwa/proprietary/googlevoice.apk:./system/app/googlevoice.apk \
         vendor/ziyouwa/proprietary/kickback.apk:./system/app/kickback.apk \
         vendor/ziyouwa/proprietary/soundback.apk:./system/app/soundback.apk \
