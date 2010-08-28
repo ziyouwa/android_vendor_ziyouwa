@@ -1,0 +1,28 @@
+﻿<plmnOverrides>
+    
+<plmnOverride numeric="46000_zh_CN" plmn="中国移动"/>
+ 
+<plmnOverride numeric="46000_en_US" plmn="China Mobile"/>
+    <plmnOverride numeric="46000_zh_TW" plmn="中國移動"/>
+    
+<plmnOverride numeric="46001_zh_CN" plmn="中国联通"/>
+    
+<plmnOverride numeric="46001_zh_TW" plmn="中國聯通"/>
+    
+<plmnOverride numeric="46002_zh_CN" plmn="中国移动"/>
+    
+<plmnOverride numeric="46002_zh_TW" plmn="中國移動"/>
+    
+<plmnOverride numeric="46003_zh_CN" plmn="中国联通"/>
+    
+<plmnOverride numeric="46003_zh_TW" plmn="中國聯通"/>
+  
+<plmnOverride numeric="46006_zh_CN" plmn="中国联通"/>
+    
+<plmnOverride numeric="46006_zh_TW" plmn="中國聯通"/>
+  
+<plmnOverride numeric="310410_zh_CN" plmn="移动你妹"/>
+    
+<plmnOverride numeric="310410_zh_TW" plmn="移動你妹"/>
+
+</plmnOverrides>
