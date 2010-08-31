@@ -19,7 +19,7 @@
     <string name="allow">允许</string>
     <string name="forget">移除</string>
     <string name="cancel">取消</string>
-    <string name="deny">阻止</string>
+    <string name="deny">禁止</string>
     <string name="remember">记住这个选择</string>
     <string name="uid">(用户ID: %d)</string>
     <string name="request">%s 当作 %s (用户ID: %d)</string>
@@ -39,7 +39,7 @@
     <string name="detail_request">请求的用户ID:</string>
     <string name="detail_command">命令:</string>
     <string name="detail_status">状态:</string>
-    <string name="detail_created">生成时间:</string>
+    <string name="detail_created">创建时间:</string>
     <string name="detail_last_accessed">访问时间:</string>
 
     <string name="request_message">发现超级用户权限请求:</string>

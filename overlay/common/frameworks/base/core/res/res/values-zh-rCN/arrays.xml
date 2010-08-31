@@ -22,7 +22,7 @@
     <!-- Defines the shutdown options shown in the reboot dialog. -->
     <array name="shutdown_reboot_options">
         <item>重启</item>
-        <item>进入recovery</item>
-        <item>进入HBoot</item>
+        <item>恢复模式</item>
+        <item>工程模式</item>
     </array>
 </resources>

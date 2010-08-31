@@ -3,7 +3,7 @@ PRODUCT_NAME := ziyouwa
 PRODUCT_BRAND := ziyouwa
 PRODUCT_DEVICE := generic
 
-PRODUCT_PACKAGES += ADWLauncher	
+PRODUCT_PACKAGES += ADWLauncher
 
 # Use edify for otapackage
 PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_SCRIPT_MODE=edify
@@ -17,6 +17,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_MODVER=true
 # Add ROMManager build property
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=DonMessWivIt.ogg
+    ro.rommanager.developerid=cyanogenmode_by_ziyouwa
 
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
@@ -34,6 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false	\
+    ro.kernel.android.checkjni=0	\
     ro.setupwizard.mode=OPTIONAL
 
 # CyanogenMod specific product packages
@@ -98,6 +100,7 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/LatinImeTutorial.apk:./system/app/LatinImeTutorial.apk \
 #        vendor/ziyouwa/proprietary/Twitter.apk:./system/app/Twitter.apk \
 #        vendor/ziyouwa/proprietary/YouTube.apk:./system/app/YouTube.apk \
+#        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
 #        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
 #        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
 
@@ -115,7 +118,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/HtcCopyright.apk:./system/app/HtcCopyright.apk \
         vendor/ziyouwa/proprietary/HtcEmailPolicy.apk:./system/app/HtcEmailPolicy.apk \
         vendor/ziyouwa/proprietary/HtcSettings.apk:./system/app/HtcSettings.apk \
-        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
         vendor/ziyouwa/proprietary/MarketUpdater.apk:./system/app/MarketUpdater.apk \
         vendor/ziyouwa/proprietary/MediaUploader.apk:./system/app/MediaUploader.apk \
         vendor/ziyouwa/proprietary/NetworkLocation.apk:./system/app/NetworkLocation.apk \
