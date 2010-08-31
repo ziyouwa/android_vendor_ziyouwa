@@ -98,6 +98,7 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/LatinImeTutorial.apk:./system/app/LatinImeTutorial.apk \
 #        vendor/ziyouwa/proprietary/Twitter.apk:./system/app/Twitter.apk \
 #        vendor/ziyouwa/proprietary/YouTube.apk:./system/app/YouTube.apk \
+#        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
 #        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
 #        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
 
@@ -115,7 +116,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/HtcCopyright.apk:./system/app/HtcCopyright.apk \
         vendor/ziyouwa/proprietary/HtcEmailPolicy.apk:./system/app/HtcEmailPolicy.apk \
         vendor/ziyouwa/proprietary/HtcSettings.apk:./system/app/HtcSettings.apk \
-        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
         vendor/ziyouwa/proprietary/MarketUpdater.apk:./system/app/MarketUpdater.apk \
         vendor/ziyouwa/proprietary/MediaUploader.apk:./system/app/MediaUploader.apk \
         vendor/ziyouwa/proprietary/NetworkLocation.apk:./system/app/NetworkLocation.apk \
