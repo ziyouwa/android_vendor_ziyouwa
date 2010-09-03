@@ -42,10 +42,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
 
 # Use the audio profile hack
-WITH_DS_HTCACOUSTIC_HACK := true
+PRODUCT_SPECIFIC_DEFINES += WITH_DS_HTCACOUSTIC_HACK=true
 
 # Use Windows Media
-WITH_WINDOWS_MEDIA := true
+PRODUCT_SPECIFIC_DEFINES += WITH_WINDOWS_MEDIA=true
 
 PRODUCT_PROPERTY_OVERRIDES +=	\
 	ro.product.locale.language=zh	\
@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
     PinyinIME
     
 #Add support for audio+video recording on camera
-BUILD_WITH_FULL_STAGEFRIGHT := true
+PRODUCT_SPECIFIC_DEFINES += BUILD_WITH_FULL_STAGEFRIGHT=true
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.stagefright.enable-record=true
 

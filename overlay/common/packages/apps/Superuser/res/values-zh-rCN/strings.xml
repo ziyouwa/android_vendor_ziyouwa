@@ -11,15 +11,17 @@
     <string name="su_updated">su已更新到最新。</string>
     <string name="su_not_updated_title">升级失败</string>
     <string name="su_not_updated">su程序升级失败. 安装文件 (su-2.3.1-bin-signed.zip) 已经放到您的SD卡上, 请进入recovery模式进行升级。</string>
+    <string name="su_up_to_date">su已经更新到最新</string>
+    <string name="checking">检查更新...</string>
     
     <string name="tab_apps">程序列表</string>
     <string name="tab_log">日志</string>
     <string name="tab_settings">设置</string>
 
     <string name="allow">允许</string>
-    <string name="forget">移除</string>
+    <string name="forget">禁止</string>
     <string name="cancel">取消</string>
-    <string name="deny">阻止</string>
+    <string name="deny">拒绝</string>
     <string name="remember">记住这个选择</string>
     <string name="uid">(用户ID: %d)</string>
     <string name="request">%s 当作 %s (用户ID: %d)</string>
@@ -30,16 +32,16 @@
     <string name="created">保存</string>
     <string name="toggled">切换</string>
 
-    <string name="no_log_data">日志为空</string>
+    <string name="no_log_data">没有日志</string>
     <string name="last_allowed">最近允许:</string>
     <string name="last_denied">最近阻止:</string>
-    <string name="empty">程序列表为空</string>
+    <string name="empty">列表中没有程序</string>
 
     <string name="detail_package">程序名:</string>
     <string name="detail_request">请求的用户ID:</string>
     <string name="detail_command">命令:</string>
     <string name="detail_status">状态:</string>
-    <string name="detail_created">生成时间:</string>
+    <string name="detail_created">创建时间:</string>
     <string name="detail_last_accessed">访问时间:</string>
 
     <string name="request_message">发现超级用户权限请求:</string>
@@ -66,7 +68,9 @@
     <string name="pref_notification_summary">超级用户权限确认信息的风格</string>
     <string name="pref_category_info_title">版本信息</string>
     <string name="pref_version_title">版本 v%s</string>
-    <string name="pref_version_summary">su v%s, 数据库版本 %s</string>
+    <string name="pref_version_summary">数据库版本 %s</string>
+    <string name="pref_bin_version_title">su 二进制版本 v%s</string>
+    <string name="pref_bin_version_summary">是否检查更新</string>
 
     <string name="notification_text">%s 获得超级用户权限！</string>
 </resources>
