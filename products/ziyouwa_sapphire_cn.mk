@@ -38,11 +38,22 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=amss6355_defconfig
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.compcache.default=1
 
+#
+# Set ro.modversion
+#
+ifdef CYANOGEN_NIGHTLY
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-DS-by-ziyouwa
+else
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.modversion=CyanogenMod-6.1.0-RC0-DS-by-ziyouwa
+endif
+
 # Extra DS overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
 
 # Use the audio profile hack
-PRODUCT_SPECIFIC_DEFINES += WITH_DS_HTCACOUSTIC_HACK=true
+WITH_DS_HTCACOUSTIC_HACK := true
 
 # Use Windows Media
 PRODUCT_SPECIFIC_DEFINES += WITH_WINDOWS_MEDIA=true
