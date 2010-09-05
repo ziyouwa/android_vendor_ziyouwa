@@ -51,11 +51,11 @@
     <string name="title_clock_color">时钟颜色</string>
 
     <!-- Status Bar, dBm Signal -->
-    <string name="dbm_title">dBm signal strength</string>
-    <string name="title_show_dbm">Show dBm</string>
-    <string name="summary_on_show_dbm">Signal strength in dBm displayed in the status bar</string>
-    <string name="summary_off_show_dbm">Signal strength in dBm displayed in the status bar</string>
-    <string name="title_dbm_color">dBm color</string>
+    <string name="dbm_title">信号强度（单位：dBm）</string>
+    <string name="title_show_dbm">显示单位（单位：dBm）</string>
+    <string name="summary_on_show_dbm">显示信号强度（单位：dBm）</string>
+    <string name="summary_off_show_dbm">关闭信号强度显示</string>
+    <string name="title_dbm_color">信号强度单位颜色</string>
 
     <!-- Date and Provider -->
     <string name="dp_title">日期与服务供应商</string>
@@ -84,6 +84,7 @@
     <string name="summary_on_show_spn_sb">在状态栏中显示服务供应商代号</string>
     <string name="summary_off_show_spn_sb">在状态栏中不显示服务供应商代号</string>
     <string name="title_spn_label_color">服务供应商代号文字颜色</string>
+    <string name="title_spn_label_color">服务供应商代号标签颜色r</string>
 
     <!-- Notifications -->
     <string name="title_notifications_sb">状态栏通知</string>
@@ -157,7 +158,11 @@
     <string name="xml_invalid_color">XML中存在无效的颜色代码！</string>
     <string name="xml_import_success">导入XML成功！请重启使设置生效。</string>
     <string name="xml_run_helper">运行CyanogenMod助手</string>
-
+    <string name="title_apply_theme">选择主题</string>
+    <string name="summary_apply_theme">从存储卡选择主题</string>
+    <string name="title_save_theme">保存当前主题</string>
+    <string name="summary_save_theme">保存当前主题颜色设定到存储卡</string>
+ 
     <!-- Input Settings -->
     <string name="input_settings_title">输入设置</string>
     <string name="input_settings_summary">改变设备按键的行为</string>
@@ -269,7 +274,7 @@
     <string name="haptic_cancel_toast">震动数值未更改</string>
     <string name="haptic_revert_toast">正在恢复上次使用数值</string>
     <string name="haptic_default_toast">正在恢复默认值</string>
-    <string name="general_title">General</string>
+    <string name="general_title">默认值</string>
 
     <!-- UI Settings : Power off prompt -->
     <string name="pref_power_prompt_title">关机提示</string>
