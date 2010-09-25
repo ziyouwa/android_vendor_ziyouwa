@@ -19,6 +19,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=DonMessWivIt.ogg
     ro.rommanager.developerid=cyanogenmode_by_ziyouwa
 
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
 # Used by BusyBox
 KERNEL_MODULES_DIR:=/system/lib/modules
 
