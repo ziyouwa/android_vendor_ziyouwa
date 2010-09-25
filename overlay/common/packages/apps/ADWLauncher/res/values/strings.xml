@@ -146,7 +146,7 @@
     <string name="pref_summary_default_screen">选择作为主屏幕的屏</string>
     <string name="pref_dialog_default_screen">选择作为主屏幕的屏</string>
 
-    <string name="pref_title_desktop_scrolling_speed"滚动速度</string>
+   <string name="pref_title_desktop_scrolling_speed">滚动速度</string>
     <string name="pref_summary_desktop_scrolling_speed">设定划屏时的屏幕滚动速度</string>
     <string name="pref_dialog_desktop_scrolling_speed">设定划屏时滚屏的速度上下限/string>
 
