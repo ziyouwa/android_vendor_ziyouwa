@@ -49,6 +49,7 @@
     <string name="clock_title">时钟</string>
     <string name="title_show_clock">显示时钟</string>
     <string name="title_clock_color">时钟颜色</string>
+    <string name="clock_show_am_pm">12小时制时显示上午/下午</string>
 
     <!-- Status Bar, dBm Signal -->
     <string name="dbm_title">信号强度（单位：dBm）</string>
@@ -117,14 +118,14 @@
     <string name="trackball_advanced_title">高级选项</string>
     <string name="pref_trackball_screen_title">轨迹球总是闪烁</string>
     <string name="pref_trackball_screen_summary">轨迹球在屏幕开启时继续闪烁。</string>
-    <string name="pref_trackball_blend_title">Blend notifications</string>
-    <string name="pref_trackball_blend_summary">Blend notification colors. Overrides succession.</string>
-    <string name="pref_trackball_sucess_title">Succession</string>
-    <string name="pref_trackball_sucess_summary">Pulse notifications in succession.</string>
-    <string name="pref_trackball_random_title">Random colors</string>
-    <string name="pref_trackball_random_summary">Pulses the LED in random colors for all notifications</string>
-    <string name="pref_trackball_order_title">Pulse in order</string>
-    <string name="pref_trackball_order_summary">Pulses the LED color in order</string>
+    <string name="pref_trackball_blend_title">混合提示</string>
+    <string name="pref_trackball_blend_summary">混合提示的颜色</string>
+    <string name="pref_trackball_sucess_title">完成</string>
+    <string name="pref_trackball_sucess_summary">完成后提示闪烁</string>
+    <string name="pref_trackball_random_title">随机颜色</string>
+    <string name="pref_trackball_random_summary">使用随机的颜色顺序闪烁LED</string>
+    <string name="pref_trackball_order_title">设定颜色</string>
+    <string name="pref_trackball_order_summary">使用设定的颜色顺序闪烁LED</string>
     <string name="pref_trackball_reset_title">重置</string>
     <string name="pref_trackball_reset_summary">恢复到默认值</string>
     <string name="dialog_trackball_loading">加载中...</string>
@@ -133,7 +134,8 @@
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">警告: 可能引起电池电量快速消耗</string>
     <string name="notification_battery_warning">启用后可能每小时增加大约3%的电量消耗. 请按您的实际情况决定是否启用它。</string>
-    
+
+
     <!-- Tweaks Extras -->
     <string name="te_title">额外微调</string>
     <string name="te_title_summary">用于界面微调的额外工具</string>
@@ -143,15 +145,11 @@
     <string name="title_dialog_ui_interface">操作界面微调</string>
     <string name="message_dialog_reset">是否重置所有微调选项到默认值？重启后生效。</string>
     <string name="reset_ui_success">操作界面微调设置已重置！请重启使设置生效。</string>
-    <string name="title_export_to_xml">导出颜色设置为XML</string>
-    <string name="summary_export_to_xml">将界面颜色设置导出到/sdcard/cmparts_ui.xml</string>
     <string name="message_dialog_export">是否将界面颜色导出到XML？此操作将覆盖原有文件。</string>
     <string name="xml_sdcard_unmounted">SD卡未安装或加载。</string>
     <string name="xml_write_error">写入XML时发生错误！</string>
     <string name="xml_export_success">导出XML成功！</string>
-    <string name="title_import_from_xml">从XML中导入颜色设置</string>
-    <string name="summary_import_from_xml">从/sdcard/cmparts_ui.xml中导入界面颜色设置</string>
-    <string name="message_dialog_import">是否导入界面颜色设置？重启后生效。</string>
+   <string name="message_dialog_import">是否导入界面颜色设置？重启后生效。</string>
     <string name="xml_file_not_found">未发现XML文件！</string>
     <string name="xml_io_exception">文件读取错误！</string>
     <string name="xml_parse_error">分析XML时发生错误！</string>
@@ -274,6 +272,7 @@
     <string name="haptic_cancel_toast">震动数值未更改</string>
     <string name="haptic_revert_toast">正在恢复上次使用数值</string>
     <string name="haptic_default_toast">正在恢复默认值</string>
+
     <string name="general_title">默认值</string>
 
     <!-- UI Settings : Power off prompt -->
@@ -306,74 +305,96 @@
     <string name="summary_custom_not_bar_off">使用经典的CyanogenMod状态栏</string>
     <string name="title_not_bar_color_mask">底色</string>
     <string name="summary_not_bar_color_mask">注意: 透明（Alpha通道）不被支持</string>
-    <string name="title_custom_exp_not_bar">Custom pulldown bar</string>
-    <string name="summary_custom_exp_not_bar_on">Using customized expanded pulldown bar color and style</string>
-    <string name="summary_custom_exp_not_bar_off">Using classic CyanogenMod expanded pulldown bar</string>
-    <string name="title_not_exp_bar_color_mask">Pulldown bar color</string>
-    <string name="summary_not_exp_bar_color_mask">Pick a color to apply to elements of the pulldown notification bar</string>
+    <string name="title_custom_exp_not_bar">定制通知栏</string>
+    <string name="summary_custom_exp_not_bar_on">定制通知栏的颜色和样式</string>
+    <string name="summary_custom_exp_not_bar_off">使用经典的CyanogenMod样式</string>
+    <string name="title_not_exp_bar_color_mask">颜色</string>
+    <string name="summary_not_exp_bar_color_mask">选取颜色用于通知栏</string>
 
 
     <!-- Performance : Lock home memory -->
-    <string name="pref_lock_home_title">Lock home in memory</string>
-    <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
+    <string name="pref_lock_home_title">HOME程序常驻内存</string>
+    <string name="pref_lock_home_summary">使当前的HOME程序常驻内存</string>
+
+    <!-- Performance : Lock mms app in memory -->
+    <string name="pref_lock_mms_title">短信程序常驻内存</string>
+    <string name="pref_lock_mms_summary">避免内存不足时丢失邮件</string>
 
     <!-- Backlight -->
     <string name="backlight_title">自动背光亮度</string>
-    <string name="backlight_summary">Tweak levels and filtering</string>
-    <string name="light_filter_title">Light sensor filter</string>
-    <string name="light_filter_enabled_title">Enabled</string>
-    <string name="light_filter_enabled_summary">Apply moving average filter to sensor data to reduce flicker.</string>
-    <string name="light_filter_window_title">Window length</string>
-    <string name="light_filter_window_summary">Filtered value is the average sensor value during this period.</string>
-    <string name="light_filter_reset_title">Reset threshold</string>
-    <string name="light_filter_reset_summary">Samples deviating this much from current average resets the filter.</string>
-    <string name="light_filter_interval_title">Sample interval</string>
-    <string name="light_filter_interval_summary">Low value can improve accuracy but uses some more CPU.</string>
-    <string name="light_levels_title">Light levels</string>
-    <string name="light_levels_enabled_title">Use custom</string>
-    <string name="light_levels_dim_title">Screen dim level</string>
-    <string name="light_levels_dim_summary">Brightness used to dim the screen</string>
-    <string name="light_levels_editor_title">Edit other levels...</string>
-    <string name="light_decrease_enabled_title">Allow light decrease</string>
-    <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker.</string>
-    <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
-    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards.</string>
+    <string name="backlight_summary">调整等级和过滤</string>
+    <string name="light_filter_title">光感应器过滤设置</string>
+    <string name="light_filter_enabled_title">启用</string>
+    <string name="light_filter_enabled_summary">对传感器数据采取移动平均滤波，以减少闪烁</string>
+    <string name="light_filter_window_title">窗口长度</string>
+    <string name="light_filter_window_summary">采用传感器数据的平均值作为过滤值</string>
+    <string name="light_filter_reset_title">重置阈值</string>
+    <string name="light_filter_reset_summary">当前的平均值如果超过这个值就重置过滤器</string>
+    <string name="light_filter_interval_title">样本区间</string>
+    <string name="light_filter_interval_summary">值越小准确性越高，但CPU占用率也相应提高</string>
+    <string name="light_levels_title">亮度等级</string>
+    <string name="light_levels_enabled_title">定制</string>
+    <string name="light_levels_dim_title">屏幕亮度等级</string>
+    <string name="light_levels_dim_summary">屏幕变暗时的亮度</string>
+    <string name="light_levels_editor_title">定制其他...</string>
+    <string name="light_decrease_enabled_title">允许亮度递减</string>
+    <string name="light_decrease_enabled_summary">允许亮度递减，通过滞后来减少闪烁</string>
+    <string name="light_decrease_hysteresis_title">滞后时间</string>
+    <string name="light_decrease_hysteresis_summary">从递减开始到完成的总步数</string>
 
     <!-- Light sensor levels -->
-    <string name="ll_title">Light sensor levels</string>
-    <string name="ll_header_upper">Upper</string>
-    <string name="ll_header_lower">Lower</string>
-    <string name="ll_header_lcd">Screen</string>
-    <string name="ll_header_btn">Buttons</string>
-    <string name="ll_header_kb">Keyboard</string>
-    <string name="ll_lux">Sensor (filtered / raw):</string>
-    <string name="ll_lcd">Screen:</string>
-    <string name="ll_btn">Buttons:</string>
-    <string name="ll_kb">Keyboard:</string>
-    <string name="ll_disabled">disabled</string>
-    <string name="ll_default">Load defaults</string>
-    <string name="ll_save">Save &amp; apply</string>
-    <string name="ll_reload">Reload current</string>
-    <string name="ll_bad_levels">Levels must be increasing</string>
-    <string name="ll_num_levels">Set number of levels</string>
+    <string name="ll_title">光感应器亮度等级</string>
+    <string name="ll_header_upper">高</string>
+    <string name="ll_header_lower">低</string>
+    <string name="ll_header_lcd">屏幕</string>
+    <string name="ll_header_btn"按钮</string>
+    <string name="ll_header_kb">键盘</string>
+    <string name="ll_lux">传感器： (已过滤 / raw):</string>
+    <string name="ll_lcd">屏幕:</string>
+    <string name="ll_btn"按钮:</string>
+    <string name="ll_kb">键盘:</string>
+    <string name="ll_disabled">禁用</string>
+    <string name="ll_default">恢复默认</string>
+    <string name="ll_save">保存 &amp; 应用</string>
+    <string name="ll_reload">重新载入</string>
+    <string name="ll_bad_levels">最小修改单位</string>
+    <string name="ll_num_levels">设定等级数量</string>
 
     <!-- Sound -->
     <string name="sound_title">声音设置</string>
-    <string name="sound_summary">Sound and audio focus settings</string>
-    <string name="sound_notifications_focus_title">Notification focus</string>
-    <string name="sound_notifications_focus_summary">Audio focus requests causes compatible apps to lower the volume while notifications play.</string>
-    <string name="sound_to_speaker_title">Always play on speaker</string>
-    <string name="sound_notifications_title">Notifications</string>
-    <string name="sound_rings_title">Ring tones</string>
-    <string name="sound_alarms_title">Alarms</string>
-    <string name="sound_note_title">Note</string>
-    <string name="sound_note_summary">The settings below apply only when headphones are used.</string>
-    <string name="sound_attenuation_title">Attenuation of set volume</string>
-    <string name="sound_limitvol_title">Volume if music playing</string>
-    <string name="sound_notifications_attenuation_dialog">Notification attenuation</string>
-    <string name="sound_rings_attenuation_dialog">Ring tone attenuation</string>
-    <string name="sound_alarms_attenuation_dialog">Alarm attenuation</string>
-    <string name="sound_notifications_limitvol_dialog">Notification volume</string>
-    <string name="sound_rings_limitvol_dialog">Ring tone volume</string>
-    <string name="sound_alarms_limitvol_dialog">Alarm volume</string>
+    <string name="sound_summary">声音和音频焦点设置</string>
+    <string name="sound_notifications_focus_title">焦点设置</string>
+    <string name="sound_notifications_focus_summary">音频焦点可能导致相关程序的音量减小</string>
+    <string name="sound_to_speaker_title">扬声器音量</string>
+    <string name="sound_notifications_title">设置</string>
+    <string name="sound_rings_title">铃声</string>
+    <string name="sound_alarms_title">提示音</string>
+    <string name="sound_note_title">提示</string>
+    <string name="sound_note_summary">以下设置只有在耳机模式时才会被启用</string>
+    <string name="sound_attenuation_title">设置音量衰减值</string>
+    <string name="sound_limitvol_title">播放音乐时的音量</string>
+    <string name="sound_notifications_attenuation_dialog">衰减设置</string>
+    <string name="sound_rings_attenuation_dialog">铃声衰减</string>
+    <string name="sound_alarms_attenuation_dialog">警示衰减</string>
+    <string name="sound_notifications_limitvol_dialog">提示音量</string>
+    <string name="sound_rings_limitvol_dialog">铃声音量</string>
+    <string name="sound_alarms_limitvol_dialog">警示音量</string>
+    <!-- Quiet hours -->
+    <string name="sound_category_quiet_hours_title">免打扰设置</string>
+    <string name="quiet_hours_enabled">启用免打扰模式</string>
+    <string name="quiet_hours_enabled_on">强制进入免打扰模式</string>
+    <string name="quiet_hours_enabled_off">返回正常模式时提示</string>
+    <string name="quiet_hours_start">进入免打扰模式</string>
+    <string name="quiet_hours_start_summary">强制进入免打扰模式</string>
+    <string name="quiet_hours_end">退出免打扰模式</string>
+    <string name="quiet_hours_end_summary">强制退出免打扰模式</string>
+    <string name="quiet_hours_mute">静音提示</string>
+    <string name="quiet_hours_mute_on">禁止播放声音</string>
+    <string name="quiet_hours_mute_off">恢复播放声音</string>
+    <string name="quiet_hours_still">禁用振动</string>
+    <string name="quiet_hours_still_on">停用振动</string>
+    <string name="quiet_hours_still_off">恢复振动</string>
+    <string name="quiet_hours_dim">LED变暗</string>
+    <string name="quiet_hours_dim_on">LED将会变到最暗</string>
+    <string name="quiet_hours_dim_off">LED将会变到最亮</string>
 </resources>
