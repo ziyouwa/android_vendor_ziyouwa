@@ -1131,13 +1131,19 @@
     <string name="add_device_admin" msgid="7133327675884827091">"激活"</string>
     <string name="device_admin_add_title" msgid="7705551449705676363">"设备管理器"</string>
     <string name="device_admin_warning" msgid="1149471041373876923">"激活此管理器可允许应用程序 <xliff:g id="APP_NAME">%1$s</xliff:g> 执行以下操作："</string>
+     <!-- Device admin warning message about policies an admin can use -->
     <string name="device_admin_status" msgid="7169948053970923035">"此管理器已激活，从而允许应用程序 <xliff:g id="APP_NAME">%1$s</xliff:g> 执行以下操作："</string>
-    <string name="untitled_apn" msgid="1230060359198685513">"未命名"</string>
+
+
+    <!-- Name to assign to a Network Access Point that was saved without a name -->
+        <string name="untitled_apn" msgid="1230060359198685513">"未命名"</string>
+
     <string name="sound_category_sound_title" msgid="1488759370067953996">"常规"</string>
     <string name="sound_category_calls_title" msgid="3688531959256239012">"来电"</string>
     <string name="sound_category_notification_title" msgid="3502115998790286943">"通知"</string>
     <string name="sound_category_feedback_title" msgid="4399742321363475393">"反馈"</string>
-        <string name="cm_settings_title">CyanogenMod设置</string>
+
+    <string name="cm_settings_title">CyanogenMod设置</string>
     <string name="launcher_settings_title">ADWLauncher</string>
     
     <string name="possibleButtons">按钮列表</string>

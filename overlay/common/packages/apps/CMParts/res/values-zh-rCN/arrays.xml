@@ -66,5 +66,6 @@
     <string-array name="pref_lockscreen_delay_entries">
         <item>立刻</item>
         <item>1秒</item>
+    </string-array>
 
 </resources>

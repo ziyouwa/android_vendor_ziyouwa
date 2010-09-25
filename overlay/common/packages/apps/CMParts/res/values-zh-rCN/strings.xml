@@ -347,7 +347,7 @@
     <string name="ll_header_upper">高</string>
     <string name="ll_header_lower">低</string>
     <string name="ll_header_lcd">屏幕</string>
-    <string name="ll_header_btn"按钮</string>
+    <string name="ll_header_btn">按钮</string>
     <string name="ll_header_kb">键盘</string>
     <string name="ll_lux">传感器： (已过滤 / raw):</string>
     <string name="ll_lcd">屏幕:</string>
