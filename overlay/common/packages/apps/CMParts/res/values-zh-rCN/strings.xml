@@ -351,7 +351,7 @@
     <string name="ll_header_kb">键盘</string>
     <string name="ll_lux">传感器： (已过滤 / raw):</string>
     <string name="ll_lcd">屏幕:</string>
-    <string name="ll_btn"按钮:</string>
+    <string name="ll_btn">按钮:</string>
     <string name="ll_kb">键盘:</string>
     <string name="ll_disabled">禁用</string>
     <string name="ll_default">恢复默认</string>
