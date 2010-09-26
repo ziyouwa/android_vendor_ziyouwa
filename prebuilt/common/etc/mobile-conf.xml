@@ -1,28 +1,13 @@
 ﻿<Mobiles>
-    
 <Mobile Numeric="46000_zh_CN" MobileName="中国移动"/>
- 
 <Mobile Numeric="46000_en_US" MobileName="China Mobile"/>
-    <Mobile Numeric="46000_zh_TW" MobileName="中國移動"/>
-    
+<Mobile Numeric="46000_zh_TW" MobileName="中國移動"/>
 <Mobile Numeric="46001_zh_CN" MobileName="中国联通"/>
-    
 <Mobile Numeric="46001_zh_TW" MobileName="中國聯通"/>
-    
 <Mobile Numeric="46002_zh_CN" MobileName="中国移动"/>
-    
 <Mobile Numeric="46002_zh_TW" MobileName="中國移動"/>
-    
 <Mobile Numeric="46003_zh_CN" MobileName="中国联通"/>
-    
 <Mobile Numeric="46003_zh_TW" MobileName="中國聯通"/>
-  
 <Mobile Numeric="46006_zh_CN" MobileName="中国联通"/>
-    
 <Mobile Numeric="46006_zh_TW" MobileName="中國聯通"/>
-  
-<Mobile Numeric="310410_zh_CN" MobileName="移动你妹"/>
-    
-<Mobile Numeric="310410_zh_TW" MobileName="移動你妹"/>
-
 </Mobiles>

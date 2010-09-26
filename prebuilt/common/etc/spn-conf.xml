@@ -1,25 +1,25 @@
 ﻿<spnOverrides>
-    
-<spnOverride numeric="46000_zh_CN" spn="中国移动"/>
- 
-<spnOverride numeric="46000_en_US" spn="China Mobile"/>
-
-<spnOverride numeric="46000_zh_TW" spn="中國移動"/>
-    
-<spnOverride numeric="46001_zh_CN" spn="中国联通"/>
-    
-<spnOverride numeric="46001_zh_TW" spn="中國聯通"/>
-    
-<spnOverride numeric="46002_zh_CN" spn="中国移动"/>
-    
-<spnOverride numeric="46002_zh_TW" spn="中國移動"/>
-    
-<spnOverride numeric="46003_zh_CN" spn="中国联通"/>
-    
-<spnOverride numeric="46003_zh_TW" spn="中國聯通"/>
-  
-<spnOverride numeric="46006_zh_CN" spn="中国联通"/>
-    
-<spnOverride numeric="46006_zh_TW" spn="中國聯通"/>
-
+	<spnOverride 
+		numeric="46000" 
+		spn="中国移动"/>
+	
+	<spnOverride 
+		numeric="46001" 
+		spn="中国联通"/>
+	
+	<spnOverride 
+		numeric="46002" 
+		spn="中国移动"/>
+	
+	<spnOverride 
+		numeric="46007" 
+		spn="中国移动"/>
+	
+	<spnOverride 
+		numeric="46003" 
+		spn="中国联通"/>
+	
+	<spnOverride 
+		numeric="46006" 
+		spn="中国联通"/>
 </spnOverrides>
