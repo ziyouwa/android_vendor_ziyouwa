@@ -104,6 +104,7 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/Twitter.apk:./system/app/Twitter.apk \
 #        vendor/ziyouwa/proprietary/YouTube.apk:./system/app/YouTube.apk \
 #        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
+#        vendor/ziyouwa/proprietary/googlevoice.apk:./system/app/googlevoice.apk \
 #        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
 #        vendor/ziyouwa/proprietary/PassionQuickOffice.apk:./system/app/PassionQuickOffice.apk \
 #        vendor/ziyouwa/proprietary/libinterstitial.so:./system/lib/libinterstitial.so \
@@ -131,14 +132,14 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/Talk.apk:./system/app/Talk.apk \
         vendor/ziyouwa/proprietary/Vending.apk:./system/app/Vending.apk \
         vendor/ziyouwa/proprietary/VoiceSearch.apk:./system/app/VoiceSearch.apk \
-        vendor/ziyouwa/proprietary/googlevoice.apk:./system/app/googlevoice.apk \
         vendor/ziyouwa/proprietary/kickback.apk:./system/app/kickback.apk \
         vendor/ziyouwa/proprietary/soundback.apk:./system/app/soundback.apk \
         vendor/ziyouwa/proprietary/talkback.apk:./system/app/talkback.apk \
         vendor/ziyouwa/proprietary/com.google.android.maps.xml:./system/etc/permissions/com.google.android.maps.xml \
         vendor/ziyouwa/proprietary/features.xml:./system/etc/permissions/features.xml \
         vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
-        vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so
+        vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so \
+        vendor/ziyouwa/proprietary/libvoicesearch.so:./system/lib/libvoicesearch.so
 else
     PRODUCT_PACKAGES += \
         Provision \
