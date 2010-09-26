@@ -1230,5 +1230,5 @@
     <!-- Proxy settings -->
     <string name="proxy_setting">代理设置</string>
     <string name="proxy_setting_summary">配置访问因特网的代理</string>
-    <string name="proxy_wifi_only">仅在启用Wi-Fi时启用代理</string>
+    <string name="proxy_wifi_on">启用Wi-Fi时启用代理</string>
 </resources>

@@ -17,7 +17,7 @@
     <string name="manifest_download_failed">没有找到有效的版本</string>
     <string name="su_original">组织</string>
     
-    <string name="warning"警告</string>
+    <string name="warning">警告</string>
     <string name="malicious_app_found">程序 %s 在为未知的应用请求超级用户权限，这通常是恶意软件的典型动作，推荐你立刻卸载它。</string>
     <string name="malicious_app_notification_ticker">检测到潜在的恶意程序</string>
     <string name="malicious_app_notification_text">%s 也许是恶意程序</string>
@@ -48,7 +48,7 @@
     <string name="no_log_data">没有日志</string>
     <string name="last_allowed">最近允许:</string>
     <string name="last_denied">最近阻止:</string>
-    <string name="empty">列表中没有程序</string>
+    <!--string name="empty">列表中没有程序</string-->
 
     <string name="detail_package">程序名:</string>
     <string name="detail_request">请求的用户ID:</string>

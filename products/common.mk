@@ -105,6 +105,8 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/YouTube.apk:./system/app/YouTube.apk \
 #        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
 #        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
+#        vendor/ziyouwa/proprietary/PassionQuickOffice.apk:./system/app/PassionQuickOffice.apk \
+#        vendor/ziyouwa/proprietary/libinterstitial.so:./system/lib/libinterstitial.so \
 #        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
 
  
@@ -125,7 +127,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/MediaUploader.apk:./system/app/MediaUploader.apk \
         vendor/ziyouwa/proprietary/NetworkLocation.apk:./system/app/NetworkLocation.apk \
         vendor/ziyouwa/proprietary/OneTimeInitializer.apk:./system/app/OneTimeInitializer.apk \
-        vendor/ziyouwa/proprietary/PassionQuickOffice.apk:./system/app/PassionQuickOffice.apk \
         vendor/ziyouwa/proprietary/SetupWizard.apk:./system/app/SetupWizard.apk \
         vendor/ziyouwa/proprietary/Talk.apk:./system/app/Talk.apk \
         vendor/ziyouwa/proprietary/Vending.apk:./system/app/Vending.apk \
@@ -137,7 +138,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/com.google.android.maps.xml:./system/etc/permissions/com.google.android.maps.xml \
         vendor/ziyouwa/proprietary/features.xml:./system/etc/permissions/features.xml \
         vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
-        vendor/ziyouwa/proprietary/libinterstitial.so:./system/lib/libinterstitial.so \
         vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so
 else
     PRODUCT_PACKAGES += \
