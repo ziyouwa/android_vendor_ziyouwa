@@ -1,5 +1,5 @@
 $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.mk)
-$(call inherit-product, vendor/ziyouwa/device_sapphire.mk)
+$(call inherit-product, vendor/ziyouwa/products/device_sapphire.mk)
 
 #Add Google software
 CYANOGEN_WITH_GOOGLE := true
