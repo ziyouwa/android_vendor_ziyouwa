@@ -1,9 +1,5 @@
-$(call inherit-product, device/common/gps/gps_as_supl.mk)
 $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.mk)
-$(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
-# proprietary side of the device
-#$(call inherit-product-if-exists, vendor/htc/sapphire/dream_sapphire-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
+$(call inherit-product, vendor/ziyouwa/device_sapphire.mk)
 
 #Add Google software
 CYANOGEN_WITH_GOOGLE := true
@@ -46,7 +42,7 @@ ifdef CYANOGEN_NIGHTLY
         ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-DS-by-ziyouwa
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6.1.0-RC0-DS-by-ziyouwa
+        ro.modversion=CyanogenMod--$(shell date +%m%d%Y)-NIGHTLY-by-ziyouwa
 endif
 
 # Extra DS overlay
