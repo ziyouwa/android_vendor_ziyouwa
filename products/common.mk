@@ -45,10 +45,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     CMParts \
     CMPartsHelper \
-	CMStats	\
 	CMWallpapers \
     DSPManager \
     Superuser
+#	CMStats	
 
 # Copy over the changelog to the device
 #PRODUCT_COPY_FILES += \
