@@ -1,6 +1,6 @@
 $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.mk)
-$(call inherit-product, vendor/ziyouwa/products/device_sapphire.mk)
-
+$(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
+$(call inherit-product, device/common/gps/gps_as_supl.mk)
 #Add Google software
 CYANOGEN_WITH_GOOGLE := true
 
