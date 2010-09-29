@@ -18,6 +18,50 @@
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 
+# stuff common to all HTC phones
+$(call inherit-product, device/htc/common/common.mk)
+
+$(call inherit-product, build/target/product/core.mk)
+
+PRODUCT_PACKAGES := \
+    AccountAndSyncSettings \
+    ApplicationsProvider \
+    Browser \
+    Contacts	\
+    ContactsProvider	\
+    DefaultContainerService	\
+    DownloadProvider	\
+    HTMLViewer	\
+    MediaProvider	\
+    PackageInstaller	\
+    Phone	\
+    PicoTts	\
+    SettingsProvider	\
+    TelephonyProvider	\
+    TtsService	\
+    UserDictionaryProvider	\
+    VpnServices	\
+    DeskClock \
+    AlarmProvider \
+    Bluetooth \
+    Calculator \
+    Calendar \
+    Camera \
+    CertInstaller \
+    DrmProvider \
+    Email \
+    Gallery3D \
+    Launcher2 \
+    Mms \
+    Music \
+    Provision \
+    Protips \
+    Settings \
+    Sync \
+    Updater \
+    CalendarProvider \
+    SyncProvider
+
 DEVICE_PACKAGE_OVERLAYS := device/htc/dream_sapphire/overlay
 
 PRODUCT_PACKAGES += \
@@ -85,31 +129,6 @@ PRODUCT_COPY_FILES += \
 ## (2) Also get non-open-source aspects if available
 $(call inherit-product-if-exists, vendor/htc/dream_sapphire/dream_sapphire-vendor.mk)
 
-# stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
-
-PRODUCT_PACKAGES := \
-    AccountAndSyncSettings \
-    DeskClock \
-    AlarmProvider \
-    Bluetooth \
-    Calculator \
-    Calendar \
-    Camera \
-    CertInstaller \
-    DrmProvider \
-    Email \
-    Gallery3D \
-    Launcher2 \
-    Mms \
-    Music \
-    Provision \
-    Protips \
-    Settings \
-    Sync \
-    Updater \
-    CalendarProvider \
-    SyncProvider
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_dream_sapphire

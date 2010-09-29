@@ -3,7 +3,7 @@ PRODUCT_NAME := ziyouwa
 PRODUCT_BRAND := ziyouwa
 PRODUCT_DEVICE := generic
 
-PRODUCT_PACKAGES += ADWLauncher
+#PRODUCT_PACKAGES += ADWLauncher
 
 # Use edify for otapackage
 PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_SCRIPT_MODE=edify
