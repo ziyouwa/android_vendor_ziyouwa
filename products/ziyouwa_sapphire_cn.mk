@@ -21,7 +21,7 @@ NO_FALLBACK_FONT := false
 BOARD_KERNEL_BASE := 0x19200000
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6355
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=FRF91 BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2/FRF91/43546:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2 FRF91 43546 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRG83 BUILD_DISPLAY_ID=FRG83 BUILD_FINGERPRINT=tmobile/opal/sapphire/sapphire:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="opal-user 2.2.1 FRG83 60505 release-keys"
 
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-linux-arm-ds.map
 
@@ -32,7 +32,7 @@ PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=amss6355_defconfig
 
 # Enable Compcache by default on D/S
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.compcache.default=1
+    ro.compcache.default=18
 
 #
 # Set ro.modversion
