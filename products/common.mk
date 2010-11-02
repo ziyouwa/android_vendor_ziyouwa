@@ -5,15 +5,6 @@ PRODUCT_DEVICE := generic
 
 #PRODUCT_PACKAGES += ADWLauncher
 
-# Use edify for otapackage
-PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_SCRIPT_MODE=edify
-
-# Include backuptool
-PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=true
-
-# Display modversion in edify script.
-PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_MODVER=true
-
 # Add ROMManager build property
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=DonMessWivIt.ogg
@@ -96,7 +87,7 @@ PRODUCT_COPY_FILES += \
 #ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
 ifdef CYANOGEN_WITH_GOOGLE
-    PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false
+#    PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false
 #        vendor/ziyouwa/proprietary/CarHomeGoogle.apk:./system/app/CarHomeGoogle.apk \
 #        vendor/ziyouwa/proprietary/CarHomeLauncher.apk:./system/app/CarHomeLauncher.apk \
 #        vendor/ziyouwa/proprietary/Facebook.apk:./system/app/Facebook.apk \

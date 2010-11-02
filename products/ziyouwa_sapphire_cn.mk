@@ -52,7 +52,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
 WITH_DS_HTCACOUSTIC_HACK := true
 
 # Use Windows Media
-PRODUCT_SPECIFIC_DEFINES += WITH_WINDOWS_MEDIA=true
+#PRODUCT_SPECIFIC_DEFINES += WITH_WINDOWS_MEDIA=true
 
 PRODUCT_PROPERTY_OVERRIDES +=	\
 	ro.product.locale.language=zh	\
