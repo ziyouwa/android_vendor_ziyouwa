@@ -20,7 +20,7 @@ KERNEL_MODULES_DIR:=/system/lib/modules
 TINY_TOOLBOX:=true
 
 # Enable Windows Media if supported by the board
-WITH_WINDOWS_MEDIA:=true
+#WITH_WINDOWS_MEDIA:=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -29,8 +29,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false	\
-    ro.kernel.android.checkjni=0	\
-    ro.setupwizard.mode=OPTIONAL
+    ro.kernel.android.checkjni=0	
+#    ro.setupwizard.mode=OPTIONAL
 
 # CyanogenMod specific product packages
 PRODUCT_PACKAGES += \
