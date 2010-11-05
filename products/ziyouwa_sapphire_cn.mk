@@ -66,9 +66,9 @@ PRODUCT_PACKAGES += \
     PinyinIME
     
 #Add support for audio+video recording on camera
-PRODUCT_SPECIFIC_DEFINES += BUILD_WITH_FULL_STAGEFRIGHT=true
-PRODUCT_PROPERTY_OVERRIDES += \
-	media.stagefright.enable-record=true
+#PRODUCT_SPECIFIC_DEFINES += BUILD_WITH_FULL_STAGEFRIGHT=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#	media.stagefright.enable-record=true
 
 PRODUCT_COPY_FILES +=  \
     vendor/ziyouwa/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip \

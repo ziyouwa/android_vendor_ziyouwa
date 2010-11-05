@@ -76,9 +76,9 @@ PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/xbin/powertop:system/xbin/powertop \
     vendor/ziyouwa/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
-#PRODUCT_COPY_FILES += \
-#    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
-#    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+PRODUCT_COPY_FILES += \
+    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
+    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
  
 #PRODUCT_COPY_FILES +=  \
 #    vendor/ziyouwa/proprietary/RomManager.apk:system/app/RomManager.apk \
@@ -130,8 +130,8 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/com.google.android.maps.xml:./system/etc/permissions/com.google.android.maps.xml \
         vendor/ziyouwa/proprietary/features.xml:./system/etc/permissions/features.xml \
         vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
-        vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so \
-        vendor/ziyouwa/proprietary/libvoicesearch.so:./system/lib/libvoicesearch.so
+        vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so 
+#       vendor/ziyouwa/proprietary/libvoicesearch.so:./system/lib/libvoicesearch.so
 else
     PRODUCT_PACKAGES += \
         Provision \
