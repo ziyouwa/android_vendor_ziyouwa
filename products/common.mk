@@ -20,7 +20,7 @@ KERNEL_MODULES_DIR:=/system/lib/modules
 TINY_TOOLBOX:=true
 
 # Enable Windows Media if supported by the board
-#WITH_WINDOWS_MEDIA:=true
+WITH_WINDOWS_MEDIA:=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
-    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+#    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
  
 #PRODUCT_COPY_FILES +=  \
 #    vendor/ziyouwa/proprietary/RomManager.apk:system/app/RomManager.apk \
