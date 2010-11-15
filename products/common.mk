@@ -3,7 +3,7 @@ PRODUCT_NAME := ziyouwa
 PRODUCT_BRAND := ziyouwa
 PRODUCT_DEVICE := generic
 
-#PRODUCT_PACKAGES += ADWLauncher
+PRODUCT_PACKAGES += ADWLauncher
 
 # Add ROMManager build property
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -28,21 +28,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dataroaming=false	\
-    ro.kernel.android.checkjni=0	
-#    ro.setupwizard.mode=OPTIONAL
+    ro.com.android.dataroaming=false
 
 # CyanogenMod specific product packages
 PRODUCT_PACKAGES += \
     CMParts \
     CMPartsHelper \
-	CMWallpapers \
+    CMStats \
+    CMWallpapers \
     DSPManager \
+    FileManager \
     Superuser
-#	CMStats	
 
 # Copy over the changelog to the device
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
 #    vendor/ziyouwa/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Common CM overlay
@@ -50,7 +49,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/common
 
 # Bring in some audio files
 include frameworks/base/data/sounds/AudioPackage4.mk
-#    vendor/ziyouwa/prebuilt/common/etc/mobile-conf.xml:system/etc/mobile-conf.xml \
 
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
