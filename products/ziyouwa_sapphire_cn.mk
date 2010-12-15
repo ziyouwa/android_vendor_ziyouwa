@@ -2,7 +2,7 @@ $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.
 $(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 #Add Google software
-CYANOGEN_WITH_GOOGLE := true
+#CYANOGEN_WITH_GOOGLE := true
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/ziyouwa/products/common.mk)

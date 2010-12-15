@@ -131,7 +131,7 @@ ifdef CYANOGEN_WITH_GOOGLE
 #       vendor/ziyouwa/proprietary/libvoicesearch.so:./system/lib/libvoicesearch.so
 else
     PRODUCT_PACKAGES += \
-        Provision \
-        GoogleSearch \
-        LatinIME
+        Provision 
+#        GoogleSearch \
+#        LatinIME
 endif
