@@ -5,16 +5,17 @@ $(call inherit-product, device/common/gps/gps_as_supl.mk)
 #CYANOGEN_WITH_GOOGLE := true
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/ziyouwa/products/common.mk)
+$(call inherit-product, vendor/ziyouwa/products/common_full.mk)
 
 # Include GSM-only stuff
 $(call inherit-product, vendor/ziyouwa/products/gsm.mk)
 
 PRODUCT_NAME := ziyouwa_sapphire
-PRODUCT_BRAND := google
+PRODUCT_BRAND := htc
 PRODUCT_DEVICE := dream_sapphire
 PRODUCT_MODEL := Sapphire
 PRODUCT_MANUFACTURER := HTC
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRH78 BUILD_DISPLAY_ID=GRH78C BUILD_FINGERPRINT=google/soju/crespo:2.3.1/GRH78/85442:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.1 GRH78 85442 release-keys"
 
 NO_FALLBACK_FONT := false
 
@@ -40,17 +41,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-DS-by-ziyouwa
+        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-DS-by-ziyouwa
 else
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod--$(shell date +%m%d%Y)-NIGHTLY-by-ziyouwa
+    ifdef CYANOGEN_RELEASE
+        PRODUCT_PROPERTY_OVERRIDES += \
+            ro.modversion=CyanogenMod-7.0.0-RC0-Sapphire
+    else
+        PRODUCT_PROPERTY_OVERRIDES += \
+            ro.modversion=CyanogenMod-7.0.0-RC0-Sapphire-YJ
+    endif
 endif
 
 # Extra DS overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
-
-# Use the audio profile hack
-WITH_DS_HTCACOUSTIC_HACK := true
 
 # Use Windows Media
 #PRODUCT_SPECIFIC_DEFINES += WITH_WINDOWS_MEDIA=true
@@ -72,7 +75,4 @@ PRODUCT_PACKAGES += \
 #	media.stagefright.enable-record=true
 
 PRODUCT_COPY_FILES +=  \
-    vendor/ziyouwa/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/ziyouwa/prebuilt/dream_sapphire/etc/AudioPara_dream.csv:system/etc/AudioPara_dream.csv \
-    vendor/ziyouwa/prebuilt/dream_sapphire/etc/AudioPara_sapphire.csv:system/etc/AudioPara_sapphire.csv
-
+    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip

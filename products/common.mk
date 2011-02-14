@@ -32,12 +32,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CyanogenMod specific product packages
 PRODUCT_PACKAGES += \
+    AndroidTerm \
     CMParts \
-    CMPartsHelper \
     CMStats \
     CMWallpapers \
     DSPManager \
-    Superuser
+    libcyanogen-dsp \
+    Pacman
+
+# Extra tools in CyanogenMod
+PRODUCT_PACKAGES += \
+    openvpn
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
@@ -46,11 +51,12 @@ PRODUCT_COPY_FILES += \
 # Common CM overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/common
 
-# Bring in some audio files
-include frameworks/base/data/sounds/AudioPackage4.mk
+# T-Mobile theme engine
+include vendor/cyanogen/products/themes_common.mk
 
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/ziyouwa/prebuilt/common/bin/chkkineto.sh:system/bin/chkkineto.sh \
     vendor/ziyouwa/prebuilt/common/bin/verify_cache_partition_size.sh:system/bin/verify_cache_partition_size.sh \
     vendor/ziyouwa/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/ziyouwa/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
@@ -62,6 +68,8 @@ PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/ziyouwa/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
     vendor/ziyouwa/prebuilt/common/etc/init.d/04modules:system/etc/init.d/04modules \
+    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
+    vendor/ziyouwa/prebuilt/common/etc/init.d/06mountdl:system/etc/init.d/06mountdl \
     vendor/ziyouwa/prebuilt/common/etc/init.d/20userinit:system/etc/init.d/20userinit \
     vendor/ziyouwa/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache \
     vendor/ziyouwa/prebuilt/common/bin/compcache:system/bin/compcache \
@@ -69,16 +77,16 @@ PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/sysinit:system/bin/sysinit \
     vendor/ziyouwa/prebuilt/common/xbin/htop:system/xbin/htop \
     vendor/ziyouwa/prebuilt/common/xbin/irssi:system/xbin/irssi \
-    vendor/ziyouwa/prebuilt/common/xbin/lsof:system/xbin/lsof \
     vendor/ziyouwa/prebuilt/common/xbin/powertop:system/xbin/powertop \
     vendor/ziyouwa/prebuilt/common/xbin/openvpn-up.sh:system/xbin/openvpn-up.sh
 
 PRODUCT_COPY_FILES += \
-    vendor/ziyouwa/prebuilt/common/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
-#    vendor/ziyouwa/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
- 
-#PRODUCT_COPY_FILES +=  \
-#    vendor/ziyouwa/proprietary/RomManager.apk:system/app/RomManager.apk \
+#    vendor/cyanogen/prebuilt/common/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+
+
+# Enable SIP+VoIP on all targets
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Always run in insecure mode, enables root on user build variants
 #ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
@@ -95,13 +103,13 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/Maps.apk:./system/app/Maps.apk \
 #        vendor/ziyouwa/proprietary/googlevoice.apk:./system/app/googlevoice.apk \
 #        vendor/ziyouwa/proprietary/Street.apk:./system/app/Street.apk \
+       vendor/ziyouwa/proprietary/GenieWidget.apk:./system/app/GenieWidget.apk \
 #        vendor/ziyouwa/proprietary/PassionQuickOffice.apk:./system/app/PassionQuickOffice.apk \
 #        vendor/ziyouwa/proprietary/libinterstitial.so:./system/lib/libinterstitial.so \
 #        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
 
  
     PRODUCT_COPY_FILES += \
-       vendor/ziyouwa/proprietary/GenieWidget.apk:./system/app/GenieWidget.apk \
         vendor/ziyouwa/proprietary/Gmail.apk:./system/app/Gmail.apk \
         vendor/ziyouwa/proprietary/GoogleBackupTransport.apk:./system/app/GoogleBackupTransport.apk \
         vendor/ziyouwa/proprietary/GoogleCalendarSyncAdapter.apk:./system/app/GoogleCalendarSyncAdapter.apk \
@@ -128,7 +136,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/ziyouwa/proprietary/features.xml:./system/etc/permissions/features.xml \
         vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
         vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so 
-#       vendor/ziyouwa/proprietary/libvoicesearch.so:./system/lib/libvoicesearch.so
 else
     PRODUCT_PACKAGES += \
         Provision 
