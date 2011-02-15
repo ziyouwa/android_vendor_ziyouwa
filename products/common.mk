@@ -5,11 +5,13 @@ PRODUCT_DEVICE := generic
 
 PRODUCT_PACKAGES += ADWLauncher
 
-# Add ROMManager build property
+ifdef CYANOGEN_NIGHTLY
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=DonMessWivIt.ogg
-    ro.rommanager.developerid=cyanogenmode_by_ziyouwa
-
+    ro.rommanager.developerid=cyanogenmodnightly
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.rommanager.developerid=cyanogenmod
+endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -19,15 +21,13 @@ KERNEL_MODULES_DIR:=/system/lib/modules
 # Tiny toolbox
 TINY_TOOLBOX:=true
 
-# Enable Windows Media if supported by the board
-WITH_WINDOWS_MEDIA:=true
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
+    ro.com.android.dateformat=yyyy-MM-dd \
     ro.com.android.dataroaming=false
 
 # CyanogenMod specific product packages
@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
-#    vendor/ziyouwa/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/cyanogen/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Common CM overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/common
