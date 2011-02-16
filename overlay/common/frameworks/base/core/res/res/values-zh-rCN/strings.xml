@@ -596,7 +596,6 @@
     <string name="js_dialog_title_default" msgid="6961903213729667573">"JavaScript"</string>
     <string name="js_dialog_before_unload" msgid="1901675448179653089">"是否从该页面导航至它处？"\n\n"<xliff:g id="MESSAGE">%s</xliff:g>"\n\n"选择“确定”继续，或选择“取消”留在当前页面。"</string>
     <string name="save_password_label" msgid="6860261758665825069">"确认"</string>
-    <string name="double_tap_toast" msgid="1068216937244567247">"提示：点按两次可放大和缩小。"</string>
     <string name="permlab_readHistoryBookmarks" msgid="1284843728203412135">"读取浏览器的历史记录和书签"</string>
     <string name="permdesc_readHistoryBookmarks" msgid="4981489815467617191">"允许应用程序读取用浏览器访问过的所有网址，以及浏览器的所有书签。"</string>
     <string name="permlab_writeHistoryBookmarks" msgid="9009434109836280374">"写入浏览器的历史记录和书签"</string>
@@ -888,7 +887,6 @@
 	<string name="reboot_progress">重启中\u2026</string>
 	<string name="reboot_confirm">确定重启手机？</string>
 	<string name="global_action_reboot">重启</string>
-	<string name="toast_reboot_recommend">注意: 定制完成后请重启手机!</string>
     <string name="progress_unmounting" product="nosdcard" msgid="535863554318797377">"正在卸载 USB 存储设备..."</string>
     <string name="progress_unmounting" product="default" msgid="5556813978958789471">"正在卸载 SD 卡..."</string>
     <string name="progress_erasing" product="nosdcard" msgid="4183664626203056915">"正在格式化 USB 存储设备"</string>

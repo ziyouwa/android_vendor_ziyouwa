@@ -46,13 +46,13 @@ PRODUCT_PACKAGES += \
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
-    vendor/cyanogen/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/ziyouwa/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Common CM overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/common
 
 # T-Mobile theme engine
-include vendor/cyanogen/products/themes_common.mk
+include vendor/ziyouwa/products/themes_common.mk
 
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
