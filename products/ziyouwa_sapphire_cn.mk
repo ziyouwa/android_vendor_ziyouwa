@@ -2,7 +2,7 @@ $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.
 $(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 #Add Google software
-#CYANOGEN_WITH_GOOGLE := true
+CYANOGEN_WITH_GOOGLE := false
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/ziyouwa/products/common_full.mk)
@@ -75,4 +75,4 @@ PRODUCT_PACKAGES += \
 #	media.stagefright.enable-record=true
 
 PRODUCT_COPY_FILES +=  \
-    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/ziyouwa/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip

@@ -3,7 +3,7 @@ PRODUCT_NAME := ziyouwa
 PRODUCT_BRAND := ziyouwa
 PRODUCT_DEVICE := generic
 
-PRODUCT_PACKAGES += ADWLauncher
+#PRODUCT_PACKAGES += ADWLauncher
 
 ifdef CYANOGEN_NIGHTLY
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
 # Always run in insecure mode, enables root on user build variants
 #ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 
-ifdef CYANOGEN_WITH_GOOGLE
+#ifdef CYANOGEN_WITH_GOOGLE
 #    PRODUCT_SPECIFIC_DEFINES += TARGET_OTA_BACKUPTOOL=false
 #        vendor/ziyouwa/proprietary/CarHomeGoogle.apk:./system/app/CarHomeGoogle.apk \
 #        vendor/ziyouwa/proprietary/CarHomeLauncher.apk:./system/app/CarHomeLauncher.apk \
@@ -107,38 +107,36 @@ ifdef CYANOGEN_WITH_GOOGLE
 #        vendor/ziyouwa/proprietary/PassionQuickOffice.apk:./system/app/PassionQuickOffice.apk \
 #        vendor/ziyouwa/proprietary/libinterstitial.so:./system/lib/libinterstitial.so \
 #        vendor/ziyouwa/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk 
-
- 
-    PRODUCT_COPY_FILES += \
-        vendor/ziyouwa/proprietary/Gmail.apk:./system/app/Gmail.apk \
-        vendor/ziyouwa/proprietary/GoogleBackupTransport.apk:./system/app/GoogleBackupTransport.apk \
-        vendor/ziyouwa/proprietary/GoogleCalendarSyncAdapter.apk:./system/app/GoogleCalendarSyncAdapter.apk \
-        vendor/ziyouwa/proprietary/GoogleContactsSyncAdapter.apk:./system/app/GoogleContactsSyncAdapter.apk \
-        vendor/ziyouwa/proprietary/GoogleFeedback.apk:./system/app/GoogleFeedback.apk \
-        vendor/ziyouwa/proprietary/GooglePartnerSetup.apk:./system/app/GooglePartnerSetup.apk \
-        vendor/ziyouwa/proprietary/GoogleQuickSearchBox.apk:./system/app/GoogleQuickSearchBox.apk \
-        vendor/ziyouwa/proprietary/GoogleServicesFramework.apk:./system/app/GoogleServicesFramework.apk \
-        vendor/ziyouwa/proprietary/HtcCopyright.apk:./system/app/HtcCopyright.apk \
-        vendor/ziyouwa/proprietary/HtcEmailPolicy.apk:./system/app/HtcEmailPolicy.apk \
-        vendor/ziyouwa/proprietary/HtcSettings.apk:./system/app/HtcSettings.apk \
-        vendor/ziyouwa/proprietary/MarketUpdater.apk:./system/app/MarketUpdater.apk \
-        vendor/ziyouwa/proprietary/MediaUploader.apk:./system/app/MediaUploader.apk \
-        vendor/ziyouwa/proprietary/NetworkLocation.apk:./system/app/NetworkLocation.apk \
-        vendor/ziyouwa/proprietary/OneTimeInitializer.apk:./system/app/OneTimeInitializer.apk \
-        vendor/ziyouwa/proprietary/SetupWizard.apk:./system/app/SetupWizard.apk \
-        vendor/ziyouwa/proprietary/Talk.apk:./system/app/Talk.apk \
-        vendor/ziyouwa/proprietary/Vending.apk:./system/app/Vending.apk \
-        vendor/ziyouwa/proprietary/VoiceSearch.apk:./system/app/VoiceSearch.apk \
-        vendor/ziyouwa/proprietary/kickback.apk:./system/app/kickback.apk \
-        vendor/ziyouwa/proprietary/soundback.apk:./system/app/soundback.apk \
-        vendor/ziyouwa/proprietary/talkback.apk:./system/app/talkback.apk \
-        vendor/ziyouwa/proprietary/com.google.android.maps.xml:./system/etc/permissions/com.google.android.maps.xml \
-        vendor/ziyouwa/proprietary/features.xml:./system/etc/permissions/features.xml \
-        vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
-        vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so 
-else
+#    PRODUCT_COPY_FILES += \
+#        vendor/ziyouwa/proprietary/Gmail.apk:./system/app/Gmail.apk \
+#        vendor/ziyouwa/proprietary/GoogleBackupTransport.apk:./system/app/GoogleBackupTransport.apk \
+#        vendor/ziyouwa/proprietary/GoogleCalendarSyncAdapter.apk:./system/app/GoogleCalendarSyncAdapter.apk \
+#        vendor/ziyouwa/proprietary/GoogleContactsSyncAdapter.apk:./system/app/GoogleContactsSyncAdapter.apk \
+#        vendor/ziyouwa/proprietary/GoogleFeedback.apk:./system/app/GoogleFeedback.apk \
+#        vendor/ziyouwa/proprietary/GooglePartnerSetup.apk:./system/app/GooglePartnerSetup.apk \
+#        vendor/ziyouwa/proprietary/GoogleQuickSearchBox.apk:./system/app/GoogleQuickSearchBox.apk \
+#        vendor/ziyouwa/proprietary/GoogleServicesFramework.apk:./system/app/GoogleServicesFramework.apk \
+#        vendor/ziyouwa/proprietary/HtcCopyright.apk:./system/app/HtcCopyright.apk \
+#        vendor/ziyouwa/proprietary/HtcEmailPolicy.apk:./system/app/HtcEmailPolicy.apk \
+# #       vendor/ziyouwa/proprietary/HtcSettings.apk:./system/app/HtcSettings.apk \
+#        vendor/ziyouwa/proprietary/MarketUpdater.apk:./system/app/MarketUpdater.apk \
+#        vendor/ziyouwa/proprietary/MediaUploader.apk:./system/app/MediaUploader.apk \
+#        vendor/ziyouwa/proprietary/NetworkLocation.apk:./system/app/NetworkLocation.apk \
+#        vendor/ziyouwa/proprietary/OneTimeInitializer.apk:./system/app/OneTimeInitializer.apk \
+# #       vendor/ziyouwa/proprietary/SetupWizard.apk:./system/app/SetupWizard.apk \
+#        vendor/ziyouwa/proprietary/Talk.apk:./system/app/Talk.apk \
+#        vendor/ziyouwa/proprietary/Vending.apk:./system/app/Vending.apk \
+#        vendor/ziyouwa/proprietary/VoiceSearch.apk:./system/app/VoiceSearch.apk \
+#        vendor/ziyouwa/proprietary/kickback.apk:./system/app/kickback.apk \
+#        vendor/ziyouwa/proprietary/soundback.apk:./system/app/soundback.apk \
+#        vendor/ziyouwa/proprietary/talkback.apk:./system/app/talkback.apk \
+#        vendor/ziyouwa/proprietary/com.google.android.maps.xml:./system/etc/permissions/com.google.android.maps.xml \
+#        vendor/ziyouwa/proprietary/features.xml:./system/etc/permissions/features.xml \
+#        vendor/ziyouwa/proprietary/com.google.android.maps.jar:./system/framework/com.google.android.maps.jar \
+#        vendor/ziyouwa/proprietary/libspeech.so:./system/lib/libspeech.so 
+#else
     PRODUCT_PACKAGES += \
         Provision 
 #        GoogleSearch \
 #        LatinIME
-endif
+#endif
