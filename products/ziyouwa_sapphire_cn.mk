@@ -1,10 +1,11 @@
+# Inherit AOSP device configuration for dream_sapphire.
 $(call inherit-product, device/htc/dream_sapphire/full_dream_sapphire.mk)
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 #Add Google software
 CYANOGEN_WITH_GOOGLE := false
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/ziyouwa/products/common_full.mk)
+$(call inherit-product, vendor/ziyouwa/products/common.mk)
 
 # Include GSM-only stuff
 $(call inherit-product, vendor/ziyouwa/products/gsm.mk)
