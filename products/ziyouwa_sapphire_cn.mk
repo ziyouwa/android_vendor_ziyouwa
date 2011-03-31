@@ -15,7 +15,9 @@ PRODUCT_BRAND := htc
 PRODUCT_DEVICE := dream_sapphire
 PRODUCT_MODEL := Sapphire
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRH78 BUILD_DISPLAY_ID=GRH78C BUILD_FINGERPRINT=google/soju/crespo:2.3.1/GRH78/85442:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.1 GRH78 85442 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRH78 BUILD_DISPLAY_ID=GRHI40 BUILD_FINGERPRINT=google/soju/crespo:2.3.3/GRI40/85442:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.3 GRI40 85442 release-keys"
+
+RPODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-linux-arm-hero.map
 
 NO_FALLBACK_FONT := false
 
@@ -34,6 +36,9 @@ else
             ro.modversion=CyanogenMod-7.0.0-RC0-Sapphire-YJ
     endif
 endif
+
+# Use the audio profile hack
+WITH_DS_HTCACOUSTIC_HACK := true
 
 # Extra DS overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire

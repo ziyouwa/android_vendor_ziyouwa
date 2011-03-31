@@ -34,8 +34,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     AndroidTerm \
     CMParts \
-    CMStats \
-    CMWallpapers \
     DSPManager \
     libcyanogen-dsp \
     Pacman
@@ -56,7 +54,7 @@ include vendor/ziyouwa/products/themes_common.mk
 
 PRODUCT_COPY_FILES += \
     vendor/ziyouwa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/ziyouwa/prebuilt/common/bin/chkkineto.sh:system/bin/chkkineto.sh \
+    vendor/ziyouwa/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh \
     vendor/ziyouwa/prebuilt/common/bin/verify_cache_partition_size.sh:system/bin/verify_cache_partition_size.sh \
     vendor/ziyouwa/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/ziyouwa/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
