@@ -11,13 +11,13 @@ $(call inherit-product, vendor/ziyouwa/products/common.mk)
 $(call inherit-product, vendor/ziyouwa/products/gsm.mk)
 
 PRODUCT_NAME := ziyouwa_sapphire
-PRODUCT_BRAND := htc
+PRODUCT_BRAND := google
 PRODUCT_DEVICE := dream_sapphire
 PRODUCT_MODEL := Sapphire
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRH78 BUILD_DISPLAY_ID=GRHI40 BUILD_FINGERPRINT=google/soju/crespo:2.3.3/GRI40/85442:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.3 GRI40 85442 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=GRI40 BUILD_DISPLAY_ID=GRI40 BUILD_FINGERPRINT=google/soju/crespo:2.3.3/GRI40/85442:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.3 GRI40 85442 release-keys"
 
-RPODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-linux-arm-hero.map
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/ziyouwa/prelink-linux-arm-hero.map
 
 NO_FALLBACK_FONT := false
 
@@ -43,6 +43,10 @@ WITH_DS_HTCACOUSTIC_HACK := true
 # Extra DS overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/ziyouwa/overlay/dream_sapphire
 
+# This file is used to install the correct audio profile when booted
+PRODUCT_COPY_FILES += \
+    vendor/ziyouwa/prebuilt/dream_sapphire/etc/init.d/02audio_profile:system/etc/init.d/02audio_profile
+
 # Use Windows Media
 #PRODUCT_SPECIFIC_DEFINES += WITH_WINDOWS_MEDIA=true
 
@@ -53,4 +57,6 @@ PRODUCT_PROPERTY_OVERRIDES +=	\
 PRODUCT_LOCALES := zh_CN en_US zh_TW
 
 PRODUCT_COPY_FILES +=  \
-    vendor/ziyouwa/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/ziyouwa/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip	\
+    vendor/cyanogen/prebuilt/dream_sapphire/etc/AudioPara_dream.csv:system/etc/AudioPara_dream.csv \
+    vendor/cyanogen/prebuilt/dream_sapphire/etc/AudioPara_sapphire.csv:system/etc/AudioPara_sapphire.csv
